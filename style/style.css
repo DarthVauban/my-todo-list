@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.side__bar {
+    padding: 65px 30px 0px 30px;
+    background-color: #0085FF;
+    max-width: 350px;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.side__bar_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.side__bar_logo_text {
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+}
+
+.add__task {
+    padding: 12px 103px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 60px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.add__task:hover {
+    transform: scale(1.05);
+}
+
+.task__title {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 12px 0px 12px 20px;
+    outline: none;
+}
+
+.task_descr {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    padding: 12px 0px 20px 20px;
+    outline: none;
+}
+
+::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    color: #888888;
+}
+
+.crate__task_btn {
+    border: none;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding: 12px 87px;
+    background-color: #0FE317;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.camcel {
+    border: none;
+    width: 100%;
+    padding: 12px 87px;
+    background-color: #DD0000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.crate__task_btn:hover {
+    transform: scale(1.05);
+}
+
+.camcel:hover {
+    transform: scale(1.05);
+}
+
+
+.crate__task {
+    display: none;
+}
