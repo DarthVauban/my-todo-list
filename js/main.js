@@ -4,7 +4,9 @@ let createTaskButton = document.querySelector('.crate__task_btn');
 let createButton = document.querySelector('.add__task');
 let cancelButton = document.querySelector('.camcel');
 let addTask = document.querySelector('.crate__task');
-// let out = document.querySelector('.out');
+let cardTitle = document.querySelector('.title');
+let bodyText = document.querySelector('.body__text');
+
 
 let arr = [];
 
@@ -23,7 +25,8 @@ cancelButton.addEventListener('click', () => {
 createTaskButton.addEventListener('click', () => {
     let title = taskTitle.value;
     let body = taskBody.value
-    let out = '';
+    let outTitle = '';
+    let outBody = '';
     let obj = {
         id: arr.length + 1,
         title,
@@ -32,8 +35,11 @@ createTaskButton.addEventListener('click', () => {
     arr.push(obj)
 
     arr.forEach(item => {
-        out += item.title
+        outTitle += item.title
+        outBody += item.body
     })
     console.log(arr)
-    // document.querySelector('.out').innerHTML = out
+
+    cardTitle.innerHTML = outTitle
+    bodyText.innerHTML = outBody
 })

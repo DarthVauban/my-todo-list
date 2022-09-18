@@ -3,6 +3,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.work__area {
+    display: flex;
+    justify-content: space-between;
+}
+
 .side__bar {
     padding: 65px 30px 0px 30px;
     background-color: #0085FF;
@@ -105,7 +110,108 @@
     transform: scale(1.05);
 }
 
-
 .crate__task {
     display: none;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px 0 20px;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.card__item {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    height: 278px;
+    padding: 0px 0px 15px 0px;
+    margin: 0px 20px 20px 0px;
+    box-shadow: 4px 4px 20px rgba(0, 133, 255, 0.4);
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.card__item:hover {
+    transform: scale(1.03);
+}
+
+.card__header {
+    display: flex;
+    background-color: #0085FF;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+
+
+.header__buttons {
+    display: flex;
+    max-width: 70px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.action__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.action__button:hover {
+    transform: scale(1.2);
+}
+
+.delete {
+    background-color: #DD0000;
+}
+
+.done {
+    background-color: #0FE317;
+}
+
+.card__body {
+    padding: 15px 15px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.body__text {
+    margin: 0;
+    font-size: 18px;
+}
+
+.card__body:after {
+	content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 1.2em;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+	pointer-events: none;
 }

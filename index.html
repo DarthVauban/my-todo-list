@@ -14,19 +14,35 @@
 </head>
 
 <body>
-    <section class="side__bar">
-        <div class="side__bar_logo">
-            <p class="side__bar_logo_text">My Todo List</p>
-        </div>
-        <div class="side__bar_container">
-            <div class="crate__task">
-                <input type="text" class="task__title" placeholder="Task title">
-                <textarea name="" id="" cols="30" rows="10" class="task_descr"
-                    placeholder="Task description"></textarea>
+    <section class="work__area">
+        <div class="side__bar">
+            <div class="side__bar_logo">
+                <p class="side__bar_logo_text">My Todo List</p>
+            </div>
+            <div class="side__bar_container">
+                <div class="crate__task">
+                    <input type="text" class="task__title" placeholder="Task title">
+                    <textarea name="" id="" cols="30" rows="10" class="task_descr"
+                        placeholder="Task description"></textarea>
                     <button class="crate__task_btn">CREATE TASK</button>
                     <button class="camcel">CANCEL</button>
+                </div>
+                <button class="add__task">ADD TASK</button>
             </div>
-            <button class="add__task">ADD TASK</button>
+        </div>
+        <div class="cards">
+            <div class="card__item">
+                <div class="card__header">
+                    <p class="title"></p>
+                    <div class="header__buttons">
+                        <button class="action__button done"><img src="./img/done.svg" alt=""></button>
+                        <button class="action__button delete"><img src="./img/delete.svg" alt=""></button>
+                    </div>
+                </div>
+                <div class="card__body">
+                    <p class="body__text"></p>
+                </div>
+            </div>
         </div>
     </section>
 
