@@ -12,10 +12,10 @@ let arr = [];
 
 addTask.addEventListener('click', () => {
     addTask.style.display = 'none'
-    createTask.style.display = 'block' 
+    createTask.style.display = 'block'
 })
 cancelButton.addEventListener('click', () => {
-    createTask.style.display = 'none' 
+    createTask.style.display = 'none'
     addTask.style.display = 'block'
 })
 
@@ -24,28 +24,20 @@ cancelButton.addEventListener('click', () => {
 createTaskButton.addEventListener('click', () => {
     let title = taskTitle.value;
     let body = taskBody.value
-    let outTitle = '';
-    let outBody = '';
-    
     let obj = {
         id: arr.length + 1,
         title,
         body,
     };
     arr.push(obj)
-
-    cards.innerHTML += cardHTML(obj.title, obj.body);
-
-    console.log(arr)
-
-
+    cards.innerHTML += cardHTML(title, body, obj.id);
     taskTitle.value = '';
     taskBody.value = '';
 })
 
 
-function cardHTML(title, body) {
-    return ` <div class="card__item">
+function cardHTML(title, body, id) {
+    return `<div class="card__item" data-id="${id}">
                     <div class="card__header">
                         <p class="title">${title}</p>
                         <div class="header__buttons">
@@ -57,4 +49,4 @@ function cardHTML(title, body) {
                         <p class="body__text">${body}</p>
                     </div>
                 </div>`
-    }
+}
