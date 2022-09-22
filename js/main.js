@@ -1,23 +1,22 @@
 let taskTitle = document.querySelector('.task__title');
 let taskBody = document.querySelector('.task_descr');
 let createTaskButton = document.querySelector('.crate__task_btn');
-let createButton = document.querySelector('.add__task');
+let addTask = document.querySelector('.add__task');
 let cancelButton = document.querySelector('.camcel');
-let addTask = document.querySelector('.crate__task');
-let cardTitle = document.querySelector('.title');
-let bodyText = document.querySelector('.body__text');
+let createTask = document.querySelector('.crate__task');
+let cards = document.querySelector('.cards')
 
 
 let arr = [];
 
 
-createButton.addEventListener('click', () => {
-    createButton.style.display = 'none'
-    addTask.style.display = 'block'
+addTask.addEventListener('click', () => {
+    addTask.style.display = 'none'
+    createTask.style.display = 'block' 
 })
 cancelButton.addEventListener('click', () => {
-    addTask.style.display = 'none'
-    createButton.style.display = 'block'
+    createTask.style.display = 'none' 
+    addTask.style.display = 'block'
 })
 
 
@@ -27,6 +26,7 @@ createTaskButton.addEventListener('click', () => {
     let body = taskBody.value
     let outTitle = '';
     let outBody = '';
+    
     let obj = {
         id: arr.length + 1,
         title,
@@ -34,12 +34,27 @@ createTaskButton.addEventListener('click', () => {
     };
     arr.push(obj)
 
-    arr.forEach(item => {
-        outTitle += item.title
-        outBody += item.body
-    })
+    cards.innerHTML += cardHTML(obj.title, obj.body);
+
     console.log(arr)
 
-    cardTitle.innerHTML = outTitle
-    bodyText.innerHTML = outBody
+
+    taskTitle.value = '';
+    taskBody.value = '';
 })
+
+
+function cardHTML(title, body) {
+    return ` <div class="card__item">
+                    <div class="card__header">
+                        <p class="title">${title}</p>
+                        <div class="header__buttons">
+                            <button class="action__button done"><img src="./img/done.svg" alt=""></button>
+                            <button class="action__button delete"><img src="./img/delete.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <p class="body__text">${body}</p>
+                    </div>
+                </div>`
+    }
